@@ -1,0 +1,31 @@
+{
+  "name": "tdd-bookstore",
+  "version": "0.0.1",
+  "description": "Test Driven Book Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines" : {
+    "node" : ">=7.0.0",
+    "npm" : ">=3.10.8"
+  },
+  "author": "Jared Grippe <jared@learnersguild.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuildCrafts/tdd-bookstore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GuildCrafts/tdd-bookstore/issues"
+  },
+  "homepage": "https://github.com/GuildCrafts/tdd-bookstore#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.1.2"
+  }
+}
