@@ -96,8 +96,8 @@ describe('HTTP Server', () => {
       fixtures.find(fixture => fixture.id === book.id)
 
     beforeEach(() =>
-      loadFixtureData().then(books =>
-        fixtures = books
+      loadFixtureData().then(records =>
+        fixtures = records
       )
     )
 
@@ -136,6 +136,71 @@ describe('HTTP Server', () => {
           page2BookIds.forEach(bookId => {
             expect(page1BookIds).to.not.include(bookId)
           })
+        })
+      })
+    })
+
+    describe('GET /api/books?author=phILip', () => {
+      it('should render the next 10 books', () => {
+        return request('get', '/api/books?author=phILip').then(response => {
+          expectResponseToHaveStatus(response, 200)
+          const books = response.body
+          expect(books.length).to.eql(3)
+          const bookTitles = books.map(book => book.title).sort()
+          expect(bookTitles).to.eql([
+            "Do Androids Dream of Electric Sheep?",
+            "The Man in the High Castle",
+            "Ubik",
+          ])
+        })
+      })
+    })
+
+    describe('GET /api/books?title=wORld', () => {
+      it('should render the next 10 books', () => {
+        return request('get', '/api/books?title=wORld').then(response => {
+          expectResponseToHaveStatus(response, 200)
+          const books = response.body
+          expect(books.length).to.eql(3)
+          const bookTitles = books.map(book => book.title).sort()
+          expect(bookTitles).to.eql([
+            "Brave New World",
+            "Ringworld",
+            "The War of the Worlds",
+          ])
+        })
+      })
+    })
+
+    describe('GET /api/books?year=1953', () => {
+      it('should render the next 10 books', () => {
+        return request('get', '/api/books?year=1953').then(response => {
+          expectResponseToHaveStatus(response, 200)
+          const books = response.body
+          expect(books.length).to.eql(5)
+          const bookTitles = books.map(book => book.title).sort()
+          expect(bookTitles).to.eql([
+            "Childhood's End",
+            "Fahrenheit 451",
+            "More Than Human",
+            "Second Foundation",
+            "The Caves of Steel",
+          ])
+        })
+      })
+    })
+
+    describe('GET /api/books?year=1953&title=th', () => {
+      it('should render the next 10 books', () => {
+        return request('get', '/api/books?year=1953&title=th').then(response => {
+          expectResponseToHaveStatus(response, 200)
+          const books = response.body
+          expect(books.length).to.eql(2)
+          const bookTitles = books.map(book => book.title).sort()
+          expect(bookTitles).to.eql([
+            "More Than Human",
+            "The Caves of Steel",
+          ])
         })
       })
     })
