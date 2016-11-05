@@ -2,7 +2,7 @@
 
 Your goal is to get to this:
 
-```sh
+```
 $ npm test
 > mocha ./test/setup.js --recursive test/
 
@@ -38,7 +38,9 @@ $ npm test
   12 passing (3s)
 ```
 
-Your job is to make [all the tests](https://github.com/GuildCrafts/tdd-bookstore/blob/master/test/server_test.js) pass by designing a database schema and writing code withing `/server`.
+** Get All The Tests To Pass! :D**
+
+Your task is to make [all these tests](https://github.com/GuildCrafts/tdd-bookstore/blob/master/test/server_test.js) pass by designing a database schema and writing code within `/server`.
 
 ## Setup
 
@@ -67,3 +69,10 @@ npm test
 - You need to make the HTTP endpoint for resetting your database
 - The tests only interact with your react app via HTTP
 - `npm test -- --watch` to run your tests after any change
+
+
+## Error? Questions?
+
+![](https://lh3.googleusercontent.com/-r7k2j4tHMF4/U8Uxk0ttZGI/AAAAAAAAD2s/o-VioN21Jpo/w506-h380/when-all-tests-pass-fs8.png)
+
+Jared wrote this :P
