@@ -3,20 +3,28 @@
 Your goal is to get to this:
 
 ```
-$ npm test
+$ yarn test
 > mocha ./test/setup.js --recursive test/
 
   HTTP Server
     GET /ping
       ✓ should respond with "pong"
     POST /api/books
-      ✓ should create a book (38ms)
+      ✓ should create a book
       when missing title
         ✓ should render 400 bad request
     with fixture data
       GET /api/books
         ✓ should render 10 books
       GET /api/books?page=2
+        ✓ should render the next 10 books
+      GET /api/books?author=phILip
+        ✓ should render the next 10 books
+      GET /api/books?title=wORld
+        ✓ should render the next 10 books
+      GET /api/books?year=1953
+        ✓ should render the next 10 books
+      GET /api/books?year=1953&title=th
         ✓ should render the next 10 books
       GET /api/authors
         ✓ should render 10 authors
@@ -35,7 +43,7 @@ $ npm test
         ✓ should update delete the book
 
 
-  12 passing (3s)
+  16 passing (4s)
 ```
 
 ** Get All The Tests To Pass! :D**
