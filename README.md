@@ -20,8 +20,9 @@ npm test
 ```
 
 
-## More
+## Pro Tips
 
 - You should use a database of some kind
 - You need to make an HTTP endpoint for resetting your database
 - The tests only interact with your react app via HTTP
+- `npm test -- --watch` to run your tests after any change
