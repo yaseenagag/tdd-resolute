@@ -1,8 +1,44 @@
 # TDD Bookstore
 
-Your goal is to make all the tests pass by building a bookstore like API.
+Your goal is to get to this:
 
-**NOTE: DO NOT EDIT ANY FILES WITHIN /test**
+```sh
+$ npm test
+> mocha ./test/setup.js --recursive test/
+
+  HTTP Server
+    GET /ping
+      ✓ should respond with "pong"
+    POST /api/books
+      ✓ should create a book (38ms)
+      when missing title
+        ✓ should render 400 bad request
+    with fixture data
+      GET /api/books
+        ✓ should render 10 books
+      GET /api/books?page=2
+        ✓ should render the next 10 books
+      GET /api/authors
+        ✓ should render 10 authors
+      GET /api/authors?page=2
+        ✓ should render the next 10 authors
+      GET /api/books/12
+        when the book exists
+          ✓ should render book 12
+        when the book doesn't exist
+          ✓ should render nothing with status 404
+      GET /api/genres
+        ✓ should render up to 10 genres
+      POST /api/book/12
+        ✓ should update the book
+      POST /api/book/12/delete
+        ✓ should update delete the book
+
+
+  12 passing (3s)
+```
+
+Your job is to make [all the tests](https://github.com/GuildCrafts/tdd-bookstore/blob/master/test/server_test.js) pass by designing a database schema and writing code withing `/server`.
 
 ## Setup
 
@@ -11,18 +47,23 @@ npm i -g yarn
 yarn
 ```
 
-## Your workflow should be
+## Red... Green... Refactor
 
 ```sh
 npm test
-# fix broken tests
+# I dentify one broken test
+# Change the code in /server to make the test pass
+# Refactory your code (clean it up)
 # rise and repeat until all tests pass
 ```
 
+**WARNING: DO NOT EDIT ANY FILES WITHIN /test**
 
 ## Pro Tips
 
+- You must use an express server
+- Feel free to `npm install` any packaged you might need
 - You should use a database of some kind
-- You need to make an HTTP endpoint for resetting your database
+- You need to make the HTTP endpoint for resetting your database
 - The tests only interact with your react app via HTTP
 - `npm test -- --watch` to run your tests after any change
