@@ -1,0 +1,302 @@
+[
+  {
+    "title":"Dune",
+    "author":"Frank Herbert",
+    "year": 1965,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"1984 (Nineteen Eighty Four)",
+    "author":"George Orwell",
+    "year": 1949,
+    "genres": ["Sci-fi", "Science"]
+  },
+  {
+    "title":"Neuromancer",
+    "author":"William Gibson",
+    "year": 1984,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Ender's Game",
+    "author":"Orson Scott Card",
+    "year": 1985,
+    "genres": ["Sci-fi", "Fantasy"]
+  },
+  {
+    "title":"The Time Machine",
+    "author":"H. G. Wells",
+    "year": 1895,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Fahrenheit 451",
+    "author":"Ray Bradbury",
+    "year": 1953,
+    "genres": ["Sci-fi", "Science"]
+  },
+  {
+    "title":"Starship Troopers",
+    "author":"Robert A. Heinlein",
+    "year": 2004,
+    "genres": ["Sci-fi", "Fantasy"]
+  },
+  {
+    "title":"Do Androids Dream of Electric Sheep?",
+    "author":"Philip K. Dick",
+    "year": 1968,
+    "genres": ["Sci-fi", "Robots"]
+  },
+  {
+    "title":"The War of the Worlds",
+    "author":"H. G. Wells",
+    "year": 1898,
+    "genres": ["Sci-fi", "Horror"]
+  },
+  {
+    "title":"Brave New World",
+    "author":"Aldous Huxley",
+    "year": 1932,
+    "genres": ["Sci-fi", "War"]
+  },
+  {
+    "title":"Foundation",
+    "author":"Isaac Asimov",
+    "year": 1951,
+    "genres": ["Sci-fi", "Boring"]
+  },
+  {
+    "title":"The Left Hand of Darkness",
+    "author":"Ursula K. Le Guin",
+    "year": 1969,
+    "genres": ["Sci-fi", "Horror"]
+  },
+  {
+    "title":"Hyperion",
+    "author":"Dan Simmons",
+    "year": 1989,
+    "genres": ["Sci-fi", "Page Turner"]
+  },
+  {
+    "title":"The Martian Chronicles",
+    "author":"Ray Bradbury",
+    "year": 1950,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Stranger in a Strange Land",
+    "author":"Robert A. Heinlein",
+    "year": 1961,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Childhood's End",
+    "author":"Arthur C. Clarke",
+    "year": 1953,
+    "genres": ["Sci-fi", "Fantasy"]
+  },
+  {
+    "title":"The Forever War",
+    "author":"Joe Haldeman",
+    "year": 1974,
+    "genres": ["Sci-fi", "War"]
+  },
+  {
+    "title":"Kurt Vonnegut's Slaughterhouse-five",
+    "author":"Kurt Vonnegut",
+    "year": 1969,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Ringworld",
+    "author":"Larry Niven",
+    "year": 1970,
+    "genres": ["Sci-fi", "Fantasy"]
+  },
+  {
+    "title":"Rendezvous with Rama",
+    "author":"Arthur C. Clarke",
+    "year": 1973,
+    "genres": ["Sci-fi", "Horror"]
+  },
+  {
+    "title":"A Canticle for Leibowitz",
+    "author":"Walter M. Miller Jr.",
+    "year": 1959,
+    "genres": ["Sci-fi", "War"]
+  },
+  {
+    "title":"Snow Crash",
+    "author":"Neal Stephenson",
+    "year": 1992,
+    "genres": ["Sci-fi", "Cyberpunk"]
+  },
+  {
+    "title":"I, Robot",
+    "author":"Isaac Asimov",
+    "year": 1950,
+    "genres": ["Sci-fi", "War"]
+  },
+  {
+    "title":"FRANKENSTEIN",
+    "author":"Mary Shelley",
+    "year": 1818,
+    "genres": ["Sci-fi", "Horror"]
+  },
+  {
+    "title":"The Moon Is a Harsh Mistress",
+    "author":"Robert A. Heinlein",
+    "year": 1966,
+    "genres": ["Space", "Rockets", "Orbit"]
+  },
+  {
+    "title":"The Stars My Destination",
+    "author":"Alfred Bester",
+    "year": 1957,
+    "genres": ["Sci-fi", "Star Wars"]
+  },
+  {
+    "title":"A Wrinkle in Time",
+    "author":"Madeleine L'Engle",
+    "year": 1962,
+    "genres": ["Sci-fi", "Time Travel"]
+  },
+  {
+    "title":"Old Man's War",
+    "author":"John Scalzi",
+    "year": 2005,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Dispossessed",
+    "author":"Ursula K. Le Guin",
+    "year": 1974,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Man in the High Castle",
+    "author":"Philip K. Dick",
+    "year": 1962,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Solaris",
+    "author":"Stanisław Lem",
+    "year": 1961,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Day of the Triffids",
+    "author":"John Wyndham",
+    "year": 1951,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Diamond Age",
+    "author":"Neal Stephenson",
+    "year": 1995,
+    "genres": ["Sci-fi", "Post Apocalyptic"]
+  },
+  {
+    "title":"Twenty Thousand Leagues Under the Sea",
+    "author":"Jules Verne",
+    "year": 1870,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Ubik",
+    "author":"Philip K. Dick",
+    "year": 1969,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Roadside Picnic",
+    "author":"Strugatsky Brothers",
+    "year": 1972,
+    "genres": ["Sci-fi", "Post Apocalyptic"]
+  },
+  {
+    "title":"Journey to the Center of the Earth",
+    "author":"Jules Verne",
+    "year": 1864,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Cryptonomicon",
+    "author":"Neal Stephenson",
+    "year": 1999,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"A Fire Upon the Deep",
+    "author":"Vernor Vinge",
+    "year": 1992,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Cat's Cradle",
+    "author":"Kurt Vonnegut",
+    "year": 1963,
+    "genres": ["Sci-fi", "Post Apocalyptic"]
+  },
+  {
+    "title":"The Female Man",
+    "author":"Joanna Russ",
+    "year": 1975,
+    "genres": ["Sci-fi", "Post Apocalyptic", "Gender"]
+  },
+  {
+    "title":"Red Mars",
+    "author":"Kim Stanley Robinson",
+    "year": 1992,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Flowers for Algernon",
+    "author":"Daniel Keyes",
+    "year": 1959,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Sirens of Titan",
+    "author":"Kurt Vonnegut",
+    "year": 1959,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Handmaid's Tale",
+    "author":"Margaret Atwood",
+    "year": 1985,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"More Than Human",
+    "author":"Theodore Sturgeon",
+    "year": 1953,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Second Foundation",
+    "author":"Isaac Asimov",
+    "year": 1953,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"I Am Legend",
+    "author":"Richard Matheson",
+    "year": 1954,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"Kindred",
+    "author":"Octavia E. Butler",
+    "year": 1979,
+    "genres": ["Sci-fi"]
+  },
+  {
+    "title":"The Caves of Steel",
+    "author":"Isaac Asimov",
+    "year": 1953,
+    "genres": ["Sci-fi"]
+  }
+]
