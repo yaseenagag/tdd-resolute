@@ -75,7 +75,7 @@ npm test
 - Feel free to `npm install` any packaged you might need
 - You should use a database of some kind
 - You need to make the HTTP endpoint for resetting your database
-- The tests only interact with your react app via HTTP
+- The tests only interact with your code via HTTP requests to your express app
 - `npm test -- --watch` to run your tests after any change
 
 
