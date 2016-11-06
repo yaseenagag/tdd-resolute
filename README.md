@@ -46,7 +46,7 @@ $ yarn test
   16 passing (4s)
 ```
 
-** Get All The Tests To Pass! :D**
+**Get All The Tests To Pass! :D**
 
 Your task is to make [all these tests](https://github.com/GuildCrafts/tdd-bookstore/blob/master/test/server_test.js) pass by designing a database schema and writing code within `/server`.
 
