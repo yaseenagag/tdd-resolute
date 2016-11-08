@@ -19,13 +19,13 @@ $ yarn test
       GET /api/books?page=2
         ✓ should render the next 10 books
       GET /api/books?author=phILip
-        ✓ should render the next 10 books
+        ✓ should render books with authors named "Philip" (case insensitive)
       GET /api/books?title=wORld
-        ✓ should render the next 10 books
+        ✓ should render books with a title including "world" (case insensitive)
       GET /api/books?year=1953
-        ✓ should render the next 10 books
+        ✓ should render books published in 1953
       GET /api/books?year=1953&title=th
-        ✓ should render the next 10 books
+        ✓ should render books published in 1953 and with a title that includes the string "th"
       GET /api/authors
         ✓ should render 10 authors
       GET /api/authors?page=2
@@ -40,7 +40,7 @@ $ yarn test
       POST /api/book/12
         ✓ should update the book
       POST /api/book/12/delete
-        ✓ should update delete the book
+        ✓ should delete the book
 
 
   16 passing (4s)
