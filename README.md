@@ -84,4 +84,3 @@ yarn test
 ![](https://lh3.googleusercontent.com/-r7k2j4tHMF4/U8Uxk0ttZGI/AAAAAAAAD2s/o-VioN21Jpo/w506-h380/when-all-tests-pass-fs8.png)
 
 Jared wrote this :P
-Harman edited this :)
