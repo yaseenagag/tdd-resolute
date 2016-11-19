@@ -60,11 +60,11 @@ yarn
 ## Red... Green... Refactor
 
 ```sh
-npm test
-# I dentify one broken test
+yarn test
+# Identify one broken test
 # Change the code in /server to make the test pass
-# Refactory your code (clean it up)
-# rise and repeat until all tests pass
+# Refactor your code (clean it up)
+# Rinse and repeat until all tests pass
 ```
 
 **WARNING: DO NOT EDIT ANY FILES WITHIN /test**
@@ -72,11 +72,11 @@ npm test
 ## Pro Tips
 
 - You must use an express server
-- Feel free to `npm install` any packaged you might need
+- Feel free to `yarn add` any packages you might need
 - You should use a database of some kind
 - You need to make the HTTP endpoint for resetting your database
 - The tests only interact with your code via HTTP requests to your express app
-- `npm test -- --watch` to run your tests after any change
+- `yarn test -- --watch` to run your tests after any change
 
 
 ## Error? Questions?
@@ -84,3 +84,4 @@ npm test
 ![](https://lh3.googleusercontent.com/-r7k2j4tHMF4/U8Uxk0ttZGI/AAAAAAAAD2s/o-VioN21Jpo/w506-h380/when-all-tests-pass-fs8.png)
 
 Jared wrote this :P
+Harman edited this :)
