@@ -3,11 +3,11 @@ const pgpdb = pgp({ database: 'resolute'})
 
 const resetDb = () => {
   return Promise.all([
-    pgpdb.query('delete from books'),
-    pgpdb.query('delete from authors'),
-    pgpdb.query('delete from genres'),
-    pgpdb.query('delete from book_authors'),
-    pgpdb.query('delete from book_genres'),
+    pgpdb.query('truncate table books restart identity'),
+    pgpdb.query('truncate table authors restart identity'),
+    pgpdb.query('truncate table genres restart identity'),
+    pgpdb.query('truncate table book_authors restart identity'),
+    pgpdb.query('truncate table book_genres restart identity'),
   ])
 }
 
@@ -101,7 +101,37 @@ query = `${BOOKS_QUERY} ${clauses.length > 0 ? `WHERE ${clauses.join( ' AND ' )}
 return pgpdb.query( query, params )
 }
 
+const getAuthors = ({page, author}) => {
+  page = parseInt(page || 1)
+  const offset = ( page - 1 ) * 10
+  return pgpdb.query(`SELECT authors.name, authors.id FROM authors LIMIT 10 OFFSET $1`, [offset])
+}
+
+const searchByAuthor = id => {
+  return pgpdb.query(`
+  SELECT DISTINCT books.*
+  FROM books
+  LEFT JOIN book_authors
+  ON books.id=book_authors.book_id
+  LEFT JOIN authors
+  ON authors.id=book_authors.author_id
+  LEFT JOIN book_genres
+  ON books.id=book_genres.book_id
+  LEFT JOIN genres
+  ON genres.id=book_genres.genre_id
+  WHERE authors.id=$1
+  `)
+}
+
+const searchByTitle = id => {
+  return pgpdb.query(`
+    SELECT *
+    FROM books
+    WHERE books.title Like '%\${title^}%'
+  `)
+}
 
 
 
-module.exports = { resetDb, createWholeBook, getBooks }
+
+module.exports = { resetDb, createWholeBook, getBooks, getAuthors, searchByAuthor, searchByTitle }

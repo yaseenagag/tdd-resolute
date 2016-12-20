@@ -212,6 +212,7 @@ describe('HTTP Server', () => {
           expect(response.headers['content-type']).to
             .eql('application/json; charset=utf-8')
           const authors = response.body
+          console.log('authors', authors)
           expect(authors.length).to.eql(10)
         })
       })

@@ -56,7 +56,15 @@ server.get( '/api/books/:id', ( request, response ) => {
     .catch( error => response.status( 404 ).json() )
 })
 
-// server.get('/api/authors', ())
+server.get('/api/authors', ( request, response ) => {
+  db.getAuthors( request.query )
+    .then( result => response.json( result ))
+})
+
+server.get( '/api/genres', ( request, response ) => {
+  db.getGenres( request.query )
+    .then( result => response.json( result ))
+})
 
 
 if (process.env.NODE_ENV !== 'test'){
