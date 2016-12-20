@@ -18,10 +18,46 @@ server.post('/api/test/reset-db', (request, response, next) => {
 })
 
 server.post('/api/books', (request, response, next) => {
-  db.createBook(request.body).then(book => {
-    response.status(201).json(book).end
-  })
+  if ( request.body.hasOwnProperty("title") ) {
+    db.createWholeBook(request.body).then(book => {
+      response.status(201).json(book).end
+    })
+  } else {
+    response.status(400).json({
+      error: {message: 'title cannot be blank'}
+    })
+  }
 })
+
+//   Starting 10 books
+server.get('/api/books', (request, response) => {
+  db.getBooks(request.query)
+    .then((books) => {
+      response.status(200).json(books)
+    })
+    .catch(error => {
+      console.error(error)
+      response.status(500).json({error})
+    })
+})
+
+server.get('/api/books', (request, response) => {
+  let page = ( parseInt (request.query.page)) || 1
+  const id = request.params.id
+  const {title} = request.query
+  const {amount} = request.params.id
+  db.getBooks(page).then((books, page) =>
+    response.status(200).json(books))
+})
+
+server.get( '/api/books/:id', ( request, response ) => {
+  db.getBook( request.params.id )
+    .then( book => response.json( book))
+    .catch( error => response.status( 404 ).json() )
+})
+
+// server.get('/api/authors', ())
+
 
 if (process.env.NODE_ENV !== 'test'){
   server.listen(server.get('port'))

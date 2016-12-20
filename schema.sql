@@ -9,14 +9,14 @@ CREATE TABLE books (
 DROP TABLE IF EXISTS authors;
 
 CREATE TABLE authors (
-  id INTEGER NOT NULL,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 );
 
 DROP TABLE IF EXISTS genres;
 
 CREATE TABLE genres (
-  id INTEGER NOT NULL,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 );
 
@@ -31,5 +31,5 @@ DROP TABLE IF EXISTS book_genres;
 
 CREATE TABLE book_genres (
   book_id INTEGER NOT NULL,
-  author_id INTEGER NOT NULL
+  genre_id INTEGER NOT NULL
 );
