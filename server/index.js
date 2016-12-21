@@ -50,10 +50,17 @@ server.get('/api/books', (request, response) => {
     response.status(200).json(books))
 })
 
+
 server.get( '/api/books/:id', ( request, response ) => {
   db.getBook( request.params.id )
-    .then( book => response.json( book))
+    .then( book => response.json(book))
     .catch( error => response.status( 404 ).json() )
+})
+
+server.post('/api/books/:id/delete', (request, response) => {
+  console.log('going to delete book:', request.params.id)
+  db.deleteBook( request.params.id )
+    .then( () => response.status(200).json())
 })
 
 server.get('/api/authors', ( request, response ) => {
@@ -65,8 +72,6 @@ server.get( '/api/genres', ( request, response ) => {
   db.getGenres( request.query )
     .then( result => response.json( result ))
 })
-
-
 
 if (process.env.NODE_ENV !== 'test'){
   server.listen(server.get('port'))

@@ -12,6 +12,10 @@ const resetDb = () => {
   ])
 }
 
+const deleteBook = (id) => {
+  return pgpdb.query(`DELETE from books where id = ${id}; DELETE from book_authors where book_id = ${id}; DELETE from book_genres where book_id = ${id};`)
+}
+
 const createBook = (title, year) => {
   return pgpdb.query('insert into books( title, year ) values($1, $2) returning id', [title, year]).then(result => result[0].id)
 }
@@ -69,12 +73,8 @@ const getBook = (id) => {
     (SELECT authors.name FROM authors, book_authors WHERE book_authors.book_id=books.id AND book_authors.author_id=authors.id LIMIT 1) AS author,
     array(SELECT genres.name FROM genres, book_genres WHERE book_genres.book_id=books.id AND book_genres.genre_id=genres.id ORDER BY genres.name ASC) AS genres
   FROM books
-  LIMIT 1 OFFSET ${id - 1}`)
+  WHERE books.id = ${id}`)
 }
-
-// const getBookx = id =>
-//   db.one( `SELECT books.*, ${SQL.GENRES_SUBQUERY} AS genres, ${SQL.AUTHORS_SUBQUERY} AS author FROM books WHERE id=$1`, id )
-
 
 const getBooks = ({page, title, author, year, count}) => {
   page = parseInt( page || 1 )
@@ -140,7 +140,4 @@ const searchByTitle = id => {
   `)
 }
 
-
-
-
-module.exports = { resetDb, createWholeBook, getBooks, getAuthors, searchByAuthor, searchByTitle, getBook }
+module.exports = { resetDb, createWholeBook, getBooks, getAuthors, searchByAuthor, searchByTitle, getBook, deleteBook }
