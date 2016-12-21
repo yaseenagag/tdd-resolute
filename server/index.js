@@ -67,6 +67,7 @@ server.get( '/api/genres', ( request, response ) => {
 })
 
 
+
 if (process.env.NODE_ENV !== 'test'){
   server.listen(server.get('port'))
 }
