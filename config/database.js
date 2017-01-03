@@ -28,6 +28,9 @@ const createGenre = genre => {
   return pgpdb.query('insert into genres( name ) values( $1 ) returning id', [genre]).then(result => result[0].id)
 }
 
+const getGenres = () =>
+  pgpdb.any( "SELECT DISTINCT genres.name FROM genres ORDER BY name ASC LIMIT 10" )
+
 const joinBookAuthor = (bookId, authorId) => {
   return pgpdb.query('insert into book_authors( book_id, author_id ) values( $1, $2 )', [ bookId, authorId ])
 }
@@ -140,4 +143,4 @@ const searchByTitle = id => {
   `)
 }
 
-module.exports = { resetDb, createWholeBook, getBooks, getAuthors, searchByAuthor, searchByTitle, getBook, deleteBook }
+module.exports = { resetDb, createWholeBook, getBooks, getAuthors, searchByAuthor, searchByTitle, getBook, deleteBook, getGenres }
